@@ -1,0 +1,17 @@
+.style-select {
+    display: block;
+    margin: 5vh 0;
+    border-radius: 5px;
+    padding: 1vw 3vw;
+    border: none;
+    background-color: white;
+    color: #5DA081;
+    font-weight: bold;
+    font-size: 1.5vw;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+} .style-select:hover {
+    transition: 0.2s;
+    background-color: #dfdfdf;
+}

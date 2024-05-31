@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaB-MiniProject-2222015</title>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="loading" hidden>
+        <h1>chatGPTが出題しています...</h1>
+        <h3>※ 30秒以上かかる場合があります</h3>
+    </div>
+    <audio></audio>
+    
+
+    <template id="start">
+        <div class="style-start-body">
+            <h1 class="style-title">雑学三択クイズ</h1>
+            <h3 class="style-subtitle">chatGPTがあなたの年齢に合ったクイズを生成します</h3>
+            <input class="style-input" type="number" id="start-form-age" placeholder="あなたの年齢" min="1" required>
+            <button class="style-btn" type="submit" onclick="callChatGpt(loading)">スタート</button>
+        </div>
+        
+    </template>
+
+    <template id="quiz">
+        <div>
+            <h1 class="number style-title"></h1>
+            <h3 class="question style-subtitle"></h3>
+            <button id="c0" class="style-select" type="submit"></button>
+            <button id="c1" class="style-select" type="submit"></button>
+            <button id="c2" class="style-select" type="submit"></button>
+        </div>
+    </template>
+
+    <template id="result">
+        <div class="style-result-body">
+            <h1 class="style-title">結果</h1>
+            <h3 class="style-subtitle">あなたの正解数は<span class="score"></span>です</h3>
+            <button class="style-btn" onclick="render(startTemplate);">トップに戻る</button>
+        </div>
+    </template>
+
+    <!-- <script src="./sample.js"></script> -->
+    <script src="./utils.js"></script>
+    <script>
+        const root = document.getElementById('root');
+        const audio = document.querySelector('audio');
+        const loading = document.querySelector('#loading');
+        let great_cnt = 0;
+
+        // templates node
+        const startTemplate = document.querySelector('#start');
+        let quizNodeTemplates = null;
+
+        // setup
+        render(startTemplate);
+        
+    </script>
+
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/start-style.css">
+    <link rel="stylesheet" href="./css/quiz-style.css">
+    <link rel="stylesheet" href="./css/result-style.css">
+</body>
+</html>

@@ -1,0 +1,41 @@
+.style-start-body {
+    text-align: center;
+}
+
+.style-title {
+    font-size: 5vw;
+}
+
+.style-subtitle {
+    font-size: 2vw;
+}
+
+.style-input {
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    display: block;
+    width: 20vw;
+    height: 5vh;
+    padding: 1vw;
+    font-size: 1.5vw;
+    color: #5DA081;
+    margin: 0 auto 5vh auto;
+}
+
+.style-btn {
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 1vw 2vw;
+    border: none;
+    background-color: #5DA081;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+} .style-btn:hover {
+    transition: 0.2s;
+    background-color: #4b8067;
+}
